@@ -1,0 +1,27 @@
+plugins {
+    id 'cpp-application'
+    id 'cpp-unit-test'
+}
+
+repositories {
+    maven {
+        url = 'https://gtest-gradle.sourceforge.io/maven'
+    }
+}
+
+unitTest {
+    dependencies {
+        implementation 'com.google:gtest:1.8.1'
+    }
+
+    binaries.configureEach {
+        if (targetMachine.operatingSystemFamily.linux && toolChain instanceof Gcc) {
+            linkTask.get().linkerArgs.add('-lpthread')
+        }
+    }
+}
+
+application {
+    targetMachines.add(machines.linux.x86_64)
+}
+
