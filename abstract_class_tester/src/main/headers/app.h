@@ -6,11 +6,4 @@
 
 #include <string>
 
-namespace google_test_example {
-    class Greeter {
-        public:
-        std::string greeting(int);
-    };
-}
-
 #endif

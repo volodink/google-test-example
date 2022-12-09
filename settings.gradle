@@ -1,2 +1,2 @@
 rootProject.name = 'google-test-example-2'
-include('empty_string_checker')
+include('abstract_class_tester')
