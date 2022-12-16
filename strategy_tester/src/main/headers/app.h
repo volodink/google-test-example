@@ -4,6 +4,8 @@
 #ifndef APP_H
 #define APP_H
 
-#include <string>
+#include <iomanip>
+#include <memory>
+#include <vector>
 
 #endif

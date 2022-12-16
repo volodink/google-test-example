@@ -1,0 +1,46 @@
+plugins {
+    id 'cpp-application'
+    //id 'cpp-unit-test'
+}
+
+repositories {
+    maven {
+        url = 'https://gtest-gradle.sourceforge.io/maven'
+    }
+}
+
+// unitTest {
+//     dependencies {
+//         implementation 'com.google:gtest:1.8.1'
+//     }
+
+//     binaries.configureEach {
+//         if (targetMachine.operatingSystemFamily.linux && toolChain instanceof Gcc) {
+//             linkTask.get().linkerArgs.add('-lpthread')
+//         }
+//     }
+// }
+
+application {
+    targetMachines.add(machines.linux.x86_64)
+
+    // compilerArgs.addAll toolChain.map { toolChain ->
+    //     if (toolChain in [ Gcc, Clang ]) {
+    //         return ['-std=++17']
+    //     } else if (toolChain in VisualCpp) {
+    //         return '/std=c++17'
+    //     }
+    //     return []
+    // }
+}
+
+// tasks.withType(CppCompile).configureEach {
+//     compilerArgs.addAll toolChain.map { toolChain ->
+//         if (toolChain in [ Gcc, Clang ]) {
+//             return ['-std=c++2a']
+//         } else if (toolChain in VisualCpp) {
+//             return '/std=c++2a'
+//         }
+//         return []
+//     }
+// }

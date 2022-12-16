@@ -1,2 +1,2 @@
 rootProject.name = 'google-test-example-2'
-include('interface_tester')
+include('strategy_tester')
