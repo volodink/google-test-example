@@ -6,9 +6,11 @@
 
 #include "Shape.h"
 
-class Circle : Shape {  // abstract class
+class Circle : Shape {  // concrete class
+    private:
+        double diameter;
     public:
-        Circle() {};
+        Circle(double);
         double area();
         friend std::ostream& operator<<(std::ostream& stream, const Circle& c);
 };

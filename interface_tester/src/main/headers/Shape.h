@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-class Shape {  // abstract class
+class Shape {  // interface
     public:
         virtual double area() = 0;  // pure virtual function
 };
